@@ -1,0 +1,61 @@
+playlist =[{
+			"name": "August",
+			"artist": "Taylor Swift",
+			"genre": ["Alternative", "Indie"],
+			"year": "2020"
+		},
+		{
+			"name": "Where is my mind?",
+			"artist": "Pixies",
+			"genre": ["Rock"],
+			"year": "1988"
+		},
+		{
+			"name": "Homemade Dynamite",
+			"artist": "Lorde (Ft. Khalid, Post Malone, and SZA)",
+			"genre": ["Pop"],
+			"year": "2017"
+		},
+		{
+			"name": "Ribs",
+			"artist": "Lorde",
+			"genre": ["Pop"],
+			"year": "2017"
+		},
+		{
+			"name": "Vienna",
+			"artist": "Billy Joel",
+			"genre": ["Rock"],
+			"year": "1977"
+		},
+		{
+			"name": "Lemon Glow",
+			"artist": "Beach House",
+			"genre": ["Alternative", "Indie"],
+			"year": "2015"
+		},
+		{
+			"name": "Ghost Town",
+			"artist": "Kanye West (ft. PARTYNEXTDOOR)",
+			"genre": ["Hip-Hop", "Rap"],
+			"year": "2018"
+		},
+		{
+			"name": "Brazil",
+			"artist": "Declan McKenna",
+			"genre": ["Alternative", "Indie"],
+			"year": "2015"
+		},
+		{
+			"name": "Long Live",
+			"artist": "Taylor Swift",
+			"genre": ["Country"],
+			"year": "2010"
+		},
+		{
+			"name": "There She Goes",
+			"artist": "The La's",
+			"genre": ["Rock"],
+			"year": "1990"
+		}
+]

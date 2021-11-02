@@ -1,0 +1,26 @@
+setlist {
+  background-color: #FFFCAD;
+  display: block;
+  text-align: center;
+
+}
+
+/* setlist {
+  display: block;
+  font-family: sans-serif;
+  font-style: oblique;
+  border: line;
+}
+
+song {
+  display: block;
+  background-color: #EAE9ED;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+name, artist, genre, date {
+  display:block;
+  text-align: center;
+} */
