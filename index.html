@@ -5,13 +5,13 @@
 	<link rel="stylesheet" href="style.css">
 	<script language="javascript" type="text/javascript" src="playlist.json"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
-	<h1> Assignment 9: The Coming of Age Song List </h1>
-	<h3> Here is a playlist dedicated to the coming of age arc in our lives... </h3>
-
+	<h1>Assignment 9: The Coming of Age Song List</h1>
 	<h3>Choose a genre from the set list</h3>
 
 <!-- dropdown menu for genres -->
@@ -26,32 +26,30 @@
     </select>
 
     <button id="submit_genre">Submit</button>
+	<br></br>
     <div id="playlist"></div>
 
 
 	<script language="javascript">
-		var songPlaylist, singleSong, genre;
+		var songPlaylist, singleSong, genre, song;
 
 		//get the songs from the JSON file and parse it into a string
 		songPlaylist = JSON.stringify(playlist);
 		singleSong = JSON.parse(songPlaylist);
 
-		//to write onto page:
-		document.write("playlist").innerHTML += "Playlist: " + "<br><br>";
+		//display the JSON in a nice format
 		for (var i = 0; i < 10; i++) {
-			// singleSong = songPlaylist[i];
-
-			document.write("Song Name: " + singleSong.name + "<br>");
-			document.write("Artist(s): " + singleSong.artist + "<br>");
-			document.write("Genre(s): " + singleSong.genre + "<br>");
-			document.write("Year: " + singleSong.year + "<br>");
+			song = singleSong[i];
+			document.getElementById("playlist").innerHTML += "Song: " + song.name + "<br>";
+			document.getElementById("playlist").innerHTML += "Artist(s): " + song.artist + "<br>";
+			document.getElementById("playlist").innerHTML += "Genre(s): " + song.genre + "<br>";
+			document.getElementById("playlist").innerHTML += "Year: " + song.year + "<br><br><br>";
 		}
 
 		//check which of the genres were selected
 		$(document).ready(function() {
 			$('button').click(function() {
-				document.getElementById("playlist").innerHTML = "";
-
+				//sort through all the genres
 				if ($('select[id="genres_picker"] option:selected').index() == 0)
 				{
 					genre = "Alternative";
@@ -81,10 +79,18 @@
 					genre = "Country";
 				}
 
-
+				//clear the div and reset it !
+				document.getElementById("playlist").innerHTML = "";
 				//Print song names
 				for (i = 0; i < 10; i++) {
-					document.getElementById("playlist").innerHTML += songPlaylist[i].name + "<br>";
+					song = singleSong[i];
+					if (song.genre[0] == genre || song.genre[1] == genre) {
+						document.getElementById("playlist").innerHTML += "Song Name: " + song.name + "<br>";
+						document.getElementById("playlist").innerHTML += "Artist(s): " + song.artist + "<br>";
+						document.getElementById("playlist").innerHTML += "Genre(s): " + song.genre + "<br>";
+						document.getElementById("playlist").innerHTML += "Year: " + song.year + "<br><br><br>";
+
+					}
 				}
 			})
 		})

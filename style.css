@@ -1,26 +1,7 @@
-setlist {
-  background-color: #FFFCAD;
+body {
+  background-color: #bbdefb;
   display: block;
   text-align: center;
-
+  font-family: 'Fredoka One', cursive;
+  color: #f72585;
 }
-
-/* setlist {
-  display: block;
-  font-family: sans-serif;
-  font-style: oblique;
-  border: line;
-}
-
-song {
-  display: block;
-  background-color: #EAE9ED;
-  padding: 10px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-name, artist, genre, date {
-  display:block;
-  text-align: center;
-} */
