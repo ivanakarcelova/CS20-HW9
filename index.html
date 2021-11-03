@@ -34,12 +34,12 @@
 
 		//get the songs from the JSON file and parse it into a string
 		songPlaylist = JSON.stringify(playlist);
-		songPlaylist = JSON.parse(songPlaylist);
+		singleSong = JSON.parse(songPlaylist);
 
 		//to write onto page:
 		document.write("playlist").innerHTML += "Playlist: " + "<br><br>";
-		for (var i = 0; i < songPlaylist.length; i++) {
-			singleSong = songPlaylist[i];
+		for (var i = 0; i < 10; i++) {
+			// singleSong = songPlaylist[i];
 
 			document.write("Song Name: " + singleSong.name + "<br>");
 			document.write("Artist(s): " + singleSong.artist + "<br>");
@@ -83,69 +83,11 @@
 
 
 				//Print song names
-				for (i = 0; i < songPlaylist.length; i++) {
+				for (i = 0; i < 10; i++) {
 					document.getElementById("playlist").innerHTML += songPlaylist[i].name + "<br>";
 				}
 			})
-		});
-		//
-		// document.getElementById("playlist").innerHTML += "Playlist: " + "<br><br>";
-		// for (var i = 0; i < 10; i++) {
-		// 	var song = data[i];
-		//
-		// 	document.getElementByName("playlist").innerHTML += "Name: " + song.name + "<br>"
-		// 	document.getElementByName("playlist").innerHTML += "Artist(s): " + song.artist + "<br>";
-		// 	document.getElementByName("playlist").innerHTML += "Year: " + song.year + "<br>";
-		// 	document.getElementByName("playlist").innerHTML += "Genre(s): ";
-		// 	for (var j = 0; j < song.genre.length; j++) {
-		// 		document.getElementById("songs").innerHTML += song.genre[j] + " ";
-		// 	}
-		// 	document.getElementById("songs").innerHTML += "<br><br>";
-		//
-		// }
-		//
-		//
-		//
-		//
-		//
-        // //Get JSON Data and print string
-        // songlist = JSON.stringify(songs);
-        // song = JSON.parse(songlist);
-        // document.write(songlist + "<br><br>");
-		//
-        // //Print User Friendly Display
-        // for (i = 0; i < 10; i++) {
-        //     document.write(song[i].title + "<br>");
-        //     document.write("Artist: " + song[i].artist + "<br>");
-        //     document.write("Genre: " + song[i].genre + "<br>");
-        //     document.write("Released " + song[i].year + "<br><br>");
-        // }
-		//
-        // //Print Only Selected
-        // $(document).ready(function() {
-        //     $('button').click(function() {
-        //         document.getElementById("selected").innerHTML = "";
-		//
-        //         //Figure out which genre was picked
-        //         var selectedGenre;
-        //         if ($('select[name="genres"] option:selected').index() == 0) {
-        //             selectedGenre = "Pop";
-        //         } else if ($('select[name="genres"] option:selected').index() == 1) {
-        //             selectedGenre = "Alt"
-        //         } else if ($('select[name="genres"] option:selected').index() == 2) {
-        //             selectedGenre = "EDM"
-        //         } else if ($('select[name="genres"] option:selected').index() == 3) {
-        //             selectedGenre = "Rap"
-        //         }
-		//
-        //         //Print song names
-        //         for (i = 0; i < 10; i++) {
-        //             if (song[i].genre[0] == selectedGenre || song[i].genre[1] == selectedGenre) {
-        //                 document.getElementById("selected").innerHTML += song[i].title + "<br>";
-        //             }
-        //         }
-        //     })
-        // })
+		})
 	</script>
 
 </body>
